@@ -1,3 +1,42 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+#layout {
+	min-height: 100vh;
+	display: grid;
+	grid-template-columns: 300px 1fr;
+	grid-template-rows: auto 1fr;
+	grid-template-areas:
+		'sidebar nav'
+		'sidebar main';
+}
+
+/* Header styling */
+#header {
+	position: sticky;
+	top: 0;
+	grid-area: nav;
+	background: white;
+	padding: 2rem;
+}
+
+/* Sidebar styling */
+#sidebar {
+	position: sticky;
+	top: 0;
+	align-items: start;
+	height: 100vh;
+	grid-area: sidebar;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	z-index: 2;
+}
+
+/* Main content area styling */
+#main {
+	grid-area: main;
+	padding: 1.5rem;
+	background: #f3f4f8;
+	/* width: 100vw; */
+}
