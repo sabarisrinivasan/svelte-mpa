@@ -18,7 +18,7 @@ export const actions: Actions = {
 		const email = await data.get('email');
 		const password = await data.get('password');
 		if (email === 'sabari@gmail.com' && password === 'IRabas11') {
-			cookies.set('accessToken', 'merchant', { path: '/' });
+			cookies.set('accessToken', 'partner', { path: '/' });
 			console.log(email, password);
 		} else {
 			return { message: 'invalid credentials' };

@@ -1,7 +1,7 @@
 type role = {
-	ADMIN: App.Locals.role;
-	MERCHANT: App.Locals.role;
-	PARTNER: App.Locals.role;
+	ADMIN: App.Locals['role'];
+	MERCHANT: App.Locals['role'];
+	PARTNER: App.Locals['role'];
 };
 export const roles: role = {
 	ADMIN: 'admin',
@@ -9,13 +9,12 @@ export const roles: role = {
 	PARTNER: 'partner'
 };
 
-export function checkRole(user: App.Locals.role, requiredRole: string) {
-	if (!user) {
-		return false;
-	}
-
-	return user === requiredRole;
-}
+// export function checkRole(user: App.Locals['role'], requiredRole: string) {
+// 	if (!user) {
+// 		return false;
+// 	}
+// 	return user === requiredRole;
+// }
 
 type Role = {
 	[x: string]: { link: string; title: string }[];
